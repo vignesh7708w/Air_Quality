@@ -1,0 +1,14 @@
+API URL:https://rapidapi.com/Timoxz/api/air-quality-api/
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a302d85386msh7d2672867d523ecp1b333ajsn7c98766041cc',
+		'X-RapidAPI-Host': 'air-quality-api.p.rapidapi.com'
+	}
+};
+
+fetch('https://air-quality-api.p.rapidapi.com/air-quality?city=amsterdam&country=netherlands&lat=52.377956&lon=4.897070', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
